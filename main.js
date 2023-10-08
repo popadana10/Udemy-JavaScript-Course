@@ -6,6 +6,13 @@ document.querySelector("#close-nav-menu").addEventListener("click", function(){}
 
 // Greeting section
 
+function celsiusToFahr(temperature){
+    let fahr = (temperature * 9/5) + 32; 
+    console.log(fahr);
+}
+celsiusToFahr(25);
+celsiusToFahr(30);
+
 const greetingText = "Good morning!";
 const weatherCondition = "sunny";
 const userLocation = "Helsinki";
@@ -14,3 +21,4 @@ let weatherText = `The weather is ${weatherCondition} in ${userLocation} and it'
 
 document.querySelector("#greeting").innerHTML = greetingText;
 document.querySelector("p#weather").innerHTML = weatherText;
+
