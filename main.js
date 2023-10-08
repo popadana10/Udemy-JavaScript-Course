@@ -1,13 +1,16 @@
+// Menu section 
+
 document.querySelector("#open-nav-menu").addEventListener("click", function(){});
 
 document.querySelector("#close-nav-menu").addEventListener("click", function(){});
 
-const customer = "Sara";
-let balance = 2000;
+// Greeting section
 
-console.log("Hi,"+ customer + ".Your balance is USD" + balance );
+const greetingText = "Good morning!";
+const weatherCondition = "sunny";
+const userLocation = "Helsinki";
+let temperature = 22.8673;
+let weatherText = `The weather is ${weatherCondition} in ${userLocation} and it's ${temperature.toFixed(1)} °C outside.`;
 
-balance = balance + 200;
-
-console.log("Hi,"+ customer + ".Your new balance is USD" + balance );
-
+document.querySelector("#greeting").innerHTML = greetingText;
+document.querySelector("p#weather").innerHTML = weatherText;
