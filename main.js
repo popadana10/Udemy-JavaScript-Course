@@ -11,7 +11,7 @@ function celsiusToFahr(temperature){
     return fahr;
 }
 celsiusToFahr(25);
-celsiusToFahr(27);
+celsiusToFahr(30);
 
 const greetingText = "Good morning!";
 const weatherCondition = "sunny";
