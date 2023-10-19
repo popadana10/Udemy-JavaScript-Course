@@ -67,7 +67,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
   }
   
   const weatherCondition = "cloudy";
-  const userLocation = "Helsinki";
+  const userLocation = "New York";
   let temperature = 22.8673;
   let celsiusText = `The weather is ${weatherCondition} in ${userLocation} and it's ${temperature.toFixed(
     1
