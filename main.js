@@ -1,21 +1,4 @@
-/*function testAlert(message) {
-  alert("message");
-}
-console.log("Test message now");*/
 
-/*document.getElementById("greeting").innerHTML = "Hello World";*/
-/*document.getElementsByClassName("product-item");
-document.getElementsByTagName("p");*/
-/*document.querySelector("p#weather").innerHTML = "New Value";*/
-/*document.querySelector("p#weather").style.color = "red";
-document.querySelector("p#weather").style.color = "#dedede";*/
-
-/*document.querySelector("p#weather").style.margin = "100px";
-document.querySelector("p#weather").style.backgroundColor = "blue";*/
-
-/*document.querySelector("p#weather").addEventListener("click", function () {
-  alert("p element clicked");
-});*/
 
 // Menu Section
 
@@ -27,15 +10,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
     .addEventListener("click", function () {
       document.querySelector("header nav .wrapper").classList.remove("nav-open");
     });
-  
-  /*const customer = "Sara";
-  let balance = 2000;
-  
-  console.log("Hi, " + customer + ". Your balance is USD" + balance);
-  
-  balance = balance + 200;
-  
-  console.log("Hi, " + customer + ". Your new balance is USD" + balance);*/
+
   
   // Greeting Section
   
@@ -89,9 +64,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       }
     });
   
-  //new Date().getHours();
-  //new Date().getMinutes();
-  //new Date().getSeconds();
+
   
   let localTime = new Date();
   
@@ -118,16 +91,6 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       .toString()
       .padStart(2, "0");
   }, 1000);
-  
-  /*for (let a = 0; a < 10; a++) {
-    console.log(a);
-  }
-  */
-  
-  /*let animals = ["dog", "cat", "lion", "zebra"];
-  for (let a in animals) {
-    console.log(animals[a]);
-  }*/
   
   //Gallery Section
   
@@ -185,9 +148,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
     },
   ];
   
-  /*for (img in galleryImages) {
-    console.log(img);
-  }*/
+
   
   let mainImage = document.querySelector("#gallery > img");
   let thumbnails = document.querySelector("#gallery .thumbnails");
@@ -213,11 +174,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       });
       e.target.dataset.selected = true;
     });
-  
-    /*if (index === 0) {
-      thumb.dataset.selected = true;
-    } else thumb.dataset.selected = false;*/
-  
+
     thumbnails.appendChild(thumb);
   });
   
@@ -247,16 +204,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
   
       let productsFilter = document.querySelector(".products-filter");
   
-      // I get errors here !!
-      /*productsFilter.addEventListener("click", function (e) {
-        if (e.target.id === "all") {
-          populateProducts(products);
-        } else if (e.target.id === "paid") {
-          populateProducts(paidProducts);
-        } else if (e.target.id === "free") {
-          populateProducts(freeProducts);
-        }
-      });*/
+
   
       // Create the HTML element for the individual product
       let productElm = document.createElement("div");
@@ -308,21 +256,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
     ).textContent = `© ${currentYear} - All rights reserved`;
     //C 2023 - All rights reserved
   }
-  /*let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   
-  let greaterThan4 = numbers.filter(function (item) {
-    return true;
-  });
-  
-  console.log(greaterThan4);*/
-  
-  // The Fetch Method does not work. Need to check it later again
-  
-  /*navigator.geolocation.getCurrentPosition((position) => {
-    fetch("https://www.recipesfromitaly.com/tiramisu-original-italian-recipe/")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  });*/
   
   productsHandler();
   footerHandler();
