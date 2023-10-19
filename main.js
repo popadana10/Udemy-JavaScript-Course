@@ -1,5 +1,3 @@
-
-
 // Menu Section
 
 document.querySelector("#open-nav-menu").addEventListener("click", function () {
@@ -42,7 +40,7 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
   }
   
   const weatherCondition = "cloudy";
-  const userLocation = "New York";
+  const userLocation = "Helsinki";
   let temperature = 22.8673;
   let celsiusText = `The weather is ${weatherCondition} in ${userLocation} and it's ${temperature.toFixed(
     1
@@ -91,5 +89,3 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       .toString()
       .padStart(2, "0");
   }, 1000);
-  
-  
