@@ -143,5 +143,70 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       alt: "Thumbnail Image 3",
     },
   ];
+  let mainImage = document.querySelector("#gallery > img");
+  let thumbnails = document.querySelector("#gallery .thumbnails");
   
+  mainImage.src = galleryImages[0].src;
+  mainImage.alt = galleryImages[0].alt;
+
+  thumb.addEventListener("click", function (e) {
+    let selectedIndex = e.target.dataset.arrayIndex;
+    let selectedImage = galleryImages[selectedIndex];
+    mainImage.src = selectedImage.src;
+    mainImage.alt = selectedImage.alt;
+
+    thumbnails.querySelectorAll("img").forEach(function (img) {
+      img.dataset.selected = false;
+    });
+    e.target.dataset.selected = true;
+  });
+
+  function productsHandler() 
+    let productsSection = document.querySelector(".products-area");
   
+    let freeProducts = products.filter(function (item) {
+      return !item.price || item.price <= 0;
+    });
+    let paidProducts = products.filter(function (item) {
+      return item.price > 0;
+    });
+
+    let productElm = document.createElement("div");
+    productElm.classList.add("product-item");
+
+    let productImage = document.createElement("img");
+    productImage.src = product.image;
+    productImage.alt = "Image for " + product.title;
+
+    let productDetails = document.createElement("div");
+    productDetails.classList.add("product-details");
+
+    let productTitle = document.createElement("h3");
+    productTitle.classList.add("product-title");
+    productTitle.textContent = product.title;
+    let productAuthor = document.createElement("p");
+    productAuthor.classList.add("product-author");
+    productAuthor.textContent = product.author;
+    let priceTitle = document.createElement("p");
+    priceTitle.classList.add("price-title");
+    priceTitle.textContent = "Price";
+    let productPrice = document.createElement("p");
+    productPrice.classList.add("product-price");
+    productPrice.textContent =
+      product.price > 0 ? "$" + product.price.toFixed(2) : "Free";
+
+      productDetails.append(productTitle);
+      productDetails.append(productAuthor);
+      productDetails.append(priceTitle);
+      productDetails.append(productPrice);
+      
+      productElm.append(productImage);
+    productElm.append(productDetails);
+
+    function footerHandler() {
+      let currentYear = new Date().getFullYear();
+      document.querySelector(
+        "footer"
+      ).textContent = `© ${currentYear} - All rights reserved`};
+      
+      
