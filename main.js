@@ -171,6 +171,19 @@ document.querySelector("#open-nav-menu").addEventListener("click", function () {
       return item.price > 0;
     });
 
+     products.forEach(function (product, index) {
+    document.querySelector(
+      ".products-filter label[for=all] span.product-amount"
+    ).textContent = products.length;
+    document.querySelector(
+      ".products-filter label[for=paid] span.product-amount"
+    ).textContent = paidProducts.length;
+    document.querySelector(
+      ".products-filter label[for=free] span.product-amount"
+    ).textContent = freeProducts.length  ;
+
+    let productsFilter = document.querySelector(".products-filter");
+
     let productElm = document.createElement("div");
     productElm.classList.add("product-item");
 
